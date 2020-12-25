@@ -1,14 +1,14 @@
 import React from 'react'
-import './main.scss'
+import style from './main.module.scss'
 
 export const Main = () => {
     return<>
-    <section className="main">
-        <h1 className="title">
+    <section className={style.main}>
+        <h1 className={style.title}>
         Falcon 1
         </h1>
-        <div className="video-container">
-        <video className="video" autoPlay loop muted src="./video/moon.mp4"></video>
+        <div className={style.video__container}>
+        <video className={style.video} autoPlay loop muted src="./video/moon.mp4"></video>
         </div>
     </section>
     </>
