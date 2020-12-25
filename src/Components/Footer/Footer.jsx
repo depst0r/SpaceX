@@ -1,11 +1,12 @@
 import React from 'react'
+import logo from '../../logo.svg'
 import './footer.scss'
 
 
 export const Footer = () => {
     return <>
     <footer class="footer">
-		<img src="img/logo.svg" alt="logo Space X" class="logo"/>
+		<img src={logo} alt="logo Space X" class="logo"/>
 		<nav class="footer-nav">
 			<ul class="list">
 				<li class="item"><a href="#" rel="noopener noreferrer" target='_blank' class="item-link">Elon Musk Twitter</a></li>
