@@ -1,5 +1,7 @@
 export default class FetchData {
 
+    _startUrl = 'https://api.spacexdata.com/v4/'
+
     getResource = async url => {
         const res = await fetch(url)
 
@@ -10,9 +12,9 @@ export default class FetchData {
         return await res.json()
     }
 
-    getRocket = async () => await this.getResource('https://api.spacexdata.com/v4') 
+     getRocket = async () => await this.getResource(this._startUrl + 'roketc') 
 
-    getLaunches = async () => await this.getResource('https://api.spacexdata.com/v4') 
+     getLaunches = async () => await this.getResource(this._startUrl + 'launches/past') 
 
-    getCompany = async () => await this.getResource('https://api.spacexdata.com/v4') 
+     getCompany = async () => await this.getResource(this._startUrl + 'company') 
 }
