@@ -1,4 +1,6 @@
 import React from 'react'
+import RellaxWrapper from 'react-rellax-wrapper'
+
 import './features.scss'
 
 export const Features = () => {
@@ -32,12 +34,13 @@ export const Features = () => {
 					</tr>
 				</thead>
 			</table>
+			<RellaxWrapper spped={14}>
 			<img
-					src="img/falcon-1.png"
-					alt="rocket"
-					className="rocket"
-					data-rellax-speed="14"
+				src="img/falcon-1.png"
+				alt="rocket"
+				className="rocket"
 			/>
+			</RellaxWrapper>
 			<article>
 				<h3 className="features-subtitle">DESCRIPTION</h3>
 				<p className="features-text">
