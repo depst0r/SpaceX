@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Header } from './Components/Header/Header'
 import { Main } from './Components/Main/Main'
 import { Features } from './Components/Features/Features'
@@ -9,10 +9,13 @@ import './style.scss'
 
   
 function App() {
+
+  const [rocket, setRocket] = useState('Falcone 1')
+  
   return (
     <>
     <Header/>
-    <Main/>
+    <Main rocket={rocket}/>
     <Features/>
     <Calendar/>
     <Details/>
