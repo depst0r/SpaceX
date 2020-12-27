@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../../logo.svg'
 import './header.scss'
 
+
 export const Header = ({ rockets, changeRocket }) => {
     return<>
         <header className="header">

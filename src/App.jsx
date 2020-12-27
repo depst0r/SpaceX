@@ -41,7 +41,7 @@ useEffect(() => {
     <>
     <Header rockets={rockets} changeRocket={changeRocket}/>
     <Main rocket={rocket}/>
-    <Features />
+    <Features rocketFeatures={rocketFeatures}/>
     <Calendar />
     <Details />
     <Footer />
