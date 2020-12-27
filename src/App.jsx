@@ -17,6 +17,7 @@ const fetchData = new FetchData()
 
   const [rocket, setRocket] = useState('Falcon 1')
   const [rocketFeatures, setRocketFeatures] = useState(null)
+  const [rokets, setRokets] = useState([])
 
 useEffect(() => {
     updateRcket()
@@ -24,6 +25,10 @@ useEffect(() => {
 
   const updateRcket = () => {
     fetchData.getRocket()
+    .then(data => {
+      setRokets( data.map(res => res.name) )
+      return data
+    })
       .then(data => data.find(item => item.name === rocket))
       .then(rocketFeatures => setRocketFeatures({ rocketFeatures }))
   }
@@ -31,12 +36,12 @@ useEffect(() => {
 
   return (
     <>
-    <Header/>
+    <Header rokets={rokets}/>
     <Main rocket={rocket}/>
-    <Features/>
-    <Calendar/>
-    <Details/>
-    <Footer/>
+    <Features />
+    <Calendar />
+    <Details />
+    <Footer />
 </>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../logo.svg'
 import './header.scss'
 
-export const Header = () => {
+export const Header = ({ rokets }) => {
     return<>
         <header className="header">
 		<img
@@ -12,18 +12,16 @@ export const Header = () => {
 		/>
 		<nav className="main-nav nav">
 			<ul className="list">
-				<li className="item">
-					<a href="/" className="item-link">Falcon 1</a>
-				</li>
-				<li className="item">
-					<a href="/" className="item-link">Falcon 9</a>
-				</li>
-				<li className="item">
-					<a href="/" className="item-link">Falcon Heavy</a>
-				</li>
-				<li className="item">
-					<a href="/" className="item-link">Updates</a>
-				</li>
+				{rokets.map((roket, i) => (
+					<li 
+					className="item"
+					key={i}
+					>
+						<a href="#" className="item-link">
+							{roket}
+							</a>
+					</li>
+				))}
 			</ul>
 		</nav>
 		<nav className="secondary-nav">
