@@ -15,15 +15,17 @@ export const App = () =>  {
 
 const fetchData = new FetchData()
 
-  const [rocket, setRocket] = useState('Falcone 1')
+  const [rocket, setRocket] = useState('Falcon 1')
   const [rocketFeatures, setRocketFeatures] = useState(null)
 
-
+useEffect(() => {
+    updateRcket()
+}, [])
 
   const updateRcket = () => {
     fetchData.getRocket()
       .then(data => data.find(item => item.name === rocket))
-      .then(rocketFeatures => setRocketFeatures({rocketFeatures}))
+      .then(rocketFeatures => setRocketFeatures({ rocketFeatures }))
   }
 
 
