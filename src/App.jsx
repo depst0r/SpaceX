@@ -11,7 +11,7 @@ import FetchData from './service/FetchData'
 import './style.scss'
 
   
-function App() {
+export const App = () =>  {
 
 const fetchData = new FetchData()
 
@@ -34,4 +34,4 @@ const fetchData = new FetchData()
   )
 }
 
-export default App;
+
