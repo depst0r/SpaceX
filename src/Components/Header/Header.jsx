@@ -10,7 +10,12 @@ import './header.scss'
 export const Header = ({ rockets, changeRocket }) => {
 return<>
 	<header className="header">
-		<img src={logo} alt="Logo Space X" className="logo" />
+		<Link to='/'>
+		<img 
+		src={logo} 
+		alt="Logo Space X" 
+		className="logo" />
+		</Link>
 		<nav className="main-nav nav">
 			<ul className="list">
 				{rockets.map((rocket, i) => (
@@ -29,10 +34,21 @@ return<>
 		<nav className="secondary-nav">
 			<ul className="list">
 				<li className="item">
-					<a href="#" className="item-link">Home</a>
+					<NavLink to='/' 
+					className="item-link"
+					activeClassName='active'
+					>
+						Home
+						</NavLink>
 				</li>
 				<li className="item">
-					<a href="#" className="item-link">Calendar</a>
+					<NavLink 
+					to='/calendar' 
+					className="item-link"
+					activeClassName='active'
+					>
+						Calendar
+						</NavLink>
 				</li>
 			</ul>
 		</nav>
