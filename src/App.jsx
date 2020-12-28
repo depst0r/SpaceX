@@ -7,6 +7,7 @@ import { Features } from './Components/Features/Features'
 import { Footer } from './Components/Footer/Footer'
 import { Home } from './Components/Home/Home'
 import { Calendar } from './Components/Calendar/Calendar'
+import { Details } from './Components/Details/Details'
 
 import FetchData from './service/FetchData'
 
@@ -63,6 +64,10 @@ useEffect(() => {
       <Route path='/calendar'>
             <Main />
             <Calendar />
+      </Route>
+      <Route path='/details'>
+            <Main />
+            <Details />
       </Route>
       <Footer  company={company} />
   </BrowserRouter>
