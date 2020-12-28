@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
+
 import { Header } from './Components/Header/Header'
 import { Main } from './Components/Main/Main'
 import { Features } from './Components/Features/Features'
@@ -48,13 +50,17 @@ useEffect(() => {
   }
 
   return (
-    <>
-    <Home company={company}/>
-    <Header rockets={rockets} changeRocket={changeRocket} />
-    <Main rocket={rocket} />
-    <Features {...rocketFeatures} />
-    <Footer  company={company} />
-</>
+    <BrowserRouter>
+      <Header rockets={rockets} changeRocket={changeRocket} />
+      <Route exact path='/'>
+         <Home company={company} />
+      </Route>
+      <Route path='/rocket'>
+          <Main rocket={rocket} />
+          <Features {...rocketFeatures} />
+      </Route>
+      <Footer  company={company} />
+  </BrowserRouter>
   )
 }
 

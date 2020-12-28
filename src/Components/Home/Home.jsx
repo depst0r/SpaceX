@@ -9,10 +9,10 @@ export const Home = ({ company }) => {
 		<div className="container">
 			<hgroup className="title">
 				<h1>
-					<img className="logo-title" src={logo} alt={company.name}/>
+					<img className="logo-title" src={logo} alt={company?.name}/>
 				</h1>
 				<h2 className="subtitle">
-					{company.summary}
+					{company?.summary}
 				</h2>
 			</hgroup>
 
@@ -25,19 +25,19 @@ export const Home = ({ company }) => {
 					<thead>
 						<tr>
 							<td className="home_table-column table-column-left">CEO</td>
-							<td className="home_table-column">{company.ceo}</td>
+							<td className="home_table-column">{company?.ceo}</td>
 						</tr>
 						<tr>
 							<td className="home_table-column table-column-left">COO</td>
-							<td className="home_table-column">{company.coo}</td>
+							<td className="home_table-column">{company?.coo}</td>
 						</tr>
 						<tr>
 							<td className="home_table-column table-column-left">CTO</td>
-							<td className="home_table-column">{company.cto}</td>
+							<td className="home_table-column">{company?.cto}</td>
 						</tr>
 						<tr>
 							<td className="home_table-column table-column-left">CTO PROPULSION</td>
-							<td className="home_table-column">{company.cto_propulsion}</td>
+							<td className="home_table-column">{company?.cto_propulsion}</td>
 						</tr>
 
 
@@ -51,15 +51,15 @@ export const Home = ({ company }) => {
 					<thead>
 						<tr>
 							<td className="home_table-column table-column-left">State</td>
-							<td className="home_table-column">{company.headquarters.state}</td>
+							<td className="home_table-column">{company?.headquarters.state}</td>
 						</tr>
 						<tr>
 							<td className="home_table-column table-column-left">City</td>
-							<td className="home_table-column">{company.headquarters.city}</td>
+							<td className="home_table-column">{company?.headquarters.city}</td>
 						</tr>
 						<tr>
 							<td className="home_table-column table-column-left">Address</td>
-							<td className="home_table-column">{company.headquarters.address}</td>
+							<td className="home_table-column">{company?.headquarters.address}</td>
 						</tr>
 
 					</thead>
@@ -70,9 +70,7 @@ export const Home = ({ company }) => {
 					<source type="video/webm" src="https://www.spacex.com/media/mission_reusability.webm"/>
 				</video>
 			</div>
-
 		</div>
-
 	</main>
 	</>
 }
