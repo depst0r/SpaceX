@@ -24,8 +24,7 @@ useEffect(() => {
 
 useEffect(() => {
   updateCompany()
-}, [rocket])
-
+}, [])
 
   const updateRocket = () => {
     fetchData.getRocket()
@@ -44,15 +43,15 @@ useEffect(() => {
 
   const updateCompany = () => {
     fetchData.getCompany()
-      .then(companyData => setCompany(companyData))
+      .then(companyData => setCompany( companyData ))
   }
 
   return (
     <>
-    <Header rockets={rockets} changeRocket={changeRocket}/>
-    <Main rocket={rocket}/>
-    <Features {...rocketFeatures}/>
-    <Footer />
+    <Header rockets={rockets} changeRocket={changeRocket} />
+    <Main rocket={rocket} />
+    <Features {...rocketFeatures} />
+    <Footer  company={company} />
 </>
   )
 }
