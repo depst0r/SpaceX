@@ -16,10 +16,16 @@ const fetchData = new FetchData()
   const [rocket, setRocket] = useState('Falcon 1')
   const [rocketFeatures, setRocketFeatures] = useState(null)
   const [rockets, setRockets] = useState([])
+  const [company, setCompany] = useState(null)
 
 useEffect(() => {
-    updateRocket()
-}, [rocketFeatures])
+     updateRocket()
+}, [rocket])
+
+useEffect(() => {
+  updateCompany()
+}, [rocket])
+
 
   const updateRocket = () => {
     fetchData.getRocket()
@@ -35,13 +41,10 @@ useEffect(() => {
       setRocket(rocket)
   }
 
-  useEffect(() => {
-    updateCompany()
-  }, [])
 
   const updateCompany = () => {
     fetchData.getCompany()
-      .then(data => console.log(data))
+      .then(companyData => setCompany(companyData))
   }
 
   return (
