@@ -62,11 +62,9 @@ useEffect(() => {
           <Features {...rocketFeatures} />
       </Route>
       <Route path='/calendar'>
-            <Main />
             <Calendar />
       </Route>
       <Route path='/details'>
-            <Main />
             <Details />
       </Route>
       <Footer  company={company} />

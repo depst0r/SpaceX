@@ -20,7 +20,8 @@ return<>
 			<ul className="list">
 				{rockets.map((rocket, i) => (
 				<li className="item" key={i}>
-					<Link to='/rocket' 
+					<Link 
+					to='/rocket' 
 					onClick={() => {
 						changeRocket(rocket)
 						}}
@@ -34,7 +35,7 @@ return<>
 		<nav className="secondary-nav">
 			<ul className="list">
 				<li className="item">
-					<NavLink to='/' 
+					<NavLink exact to='/' 
 					className="item-link"
 					activeClassName='active'
 					>

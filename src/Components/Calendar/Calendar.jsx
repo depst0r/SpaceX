@@ -1,8 +1,10 @@
 import React from 'react'
+import { Main } from '../Main/Main'
 import './calendar.scss'
 
 export const Calendar = () => {
     return<>
+	<Main />
         <section className="calendar">
 		<div className="container">
 			<ul className="calendar-list">
@@ -46,7 +48,7 @@ export const Calendar = () => {
 									Trailblazer
 								</a>
 							</h2>
-							<a href="./details.html" className="button launches-details">Подробнее</a>
+							<a href="/" className="button launches-details">Подробнее</a>
 						</div>
 					</article>
 				</li>
@@ -62,7 +64,7 @@ export const Calendar = () => {
 									RatSat
 								</a>
 							</h2>
-							<a href="./details.html" className="button launches-details">Подробнее</a>
+							<a href="/" className="button launches-details">Подробнее</a>
 						</div>
 					</article>
 				</li>
