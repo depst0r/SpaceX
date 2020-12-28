@@ -31,7 +31,7 @@ export const Features = ({ rocketFeatures }) => {
 					</tr>
 					{rocketFeatures?.payload_weights.map(item => (
 						<tr key={item.id}>
-							<td className="table-column">PAYLOAD TO {item.id}</td>
+							<td className="table-column">PAYLOAD TO {item.id.toUpperCase()}</td>
 							<td className="table-column">{item.kg} kg / {item.lb} lb</td>
 						</tr>
 					))}
@@ -48,7 +48,7 @@ export const Features = ({ rocketFeatures }) => {
 			<article>
 				<h3 className="features-subtitle">DESCRIPTION</h3>
 				<p className="features-text">
-					The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.
+					{rocketFeatures?.description}
 				</p>
 			</article>
 		</div>

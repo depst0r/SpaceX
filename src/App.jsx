@@ -35,6 +35,15 @@ useEffect(() => {
       setRocket(rocket)
   }
 
+  useEffect(() => {
+    updateCompany()
+  }, [])
+
+  const updateCompany = () => {
+    fetchData.getCompany()
+      .then(data => console.log(data))
+  }
+
   return (
     <>
     <Header rockets={rockets} changeRocket={changeRocket}/>
