@@ -3,6 +3,7 @@ import { Header } from './Components/Header/Header'
 import { Main } from './Components/Main/Main'
 import { Features } from './Components/Features/Features'
 import { Footer } from './Components/Footer/Footer'
+import { Home } from './Components/Home/Home'
 
 import FetchData from './service/FetchData'
 
@@ -48,6 +49,7 @@ useEffect(() => {
 
   return (
     <>
+    <Home company={company}/>
     <Header rockets={rockets} changeRocket={changeRocket} />
     <Main rocket={rocket} />
     <Features {...rocketFeatures} />
