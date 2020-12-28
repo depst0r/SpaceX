@@ -1,11 +1,20 @@
 import React from 'react'
 import RellaxWrapper from 'react-rellax-wrapper'
+import { Main } from '../Main/Main'
 
 import './features.scss'
+
+const rocketImages = {
+	'Falcon 1': 'falcon-1',
+	'Falcon 9': 'falcon-9',
+	'Falcon Heavy': 'falcon-heavy',
+	'Starship': 'starship'
+}
 
 export const Features = ({ rocketFeatures }) => {
 
     return<>
+	<Main />
         <section className="features">
 		<h2 className="features-title">
 			{rocketFeatures?.name} <br/>Overview
