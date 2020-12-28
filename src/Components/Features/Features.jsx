@@ -3,11 +3,12 @@ import RellaxWrapper from 'react-rellax-wrapper'
 
 import './features.scss'
 
-export const Features = () => {
+export const Features = ({ rocketFeatures }) => {
+
     return<>
         <section className="features">
 		<h2 className="features-title">
-			Falcon 1 <br/>Overview
+			{rocketFeatures?.name} <br/>Overview
 		</h2>
 		<div className="overview">
 
@@ -18,7 +19,7 @@ export const Features = () => {
 				<thead>
 					<tr>
 						<td className="table-column">HEIGHT</td>
-						<td className="table-column">22.25 m / 73 ft</td>
+						<td className="table-column"></td>
 					</tr>
 					<tr>
 						<td className="table-column">DIAMETER</td>
