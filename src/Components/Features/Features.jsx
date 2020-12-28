@@ -19,20 +19,23 @@ export const Features = ({ rocketFeatures }) => {
 				<thead>
 					<tr>
 						<td className="table-column">HEIGHT</td>
-						<td className="table-column"></td>
+						<td className="table-column">{rocketFeatures?.height.meters} m / {rocketFeatures?.height.feet} ft</td>
 					</tr>
 					<tr>
 						<td className="table-column">DIAMETER</td>
-						<td className="table-column">1.68 m / 5.5 ft</td>
+						<td className="table-column">{rocketFeatures?.diameter.meters} m / {rocketFeatures?.diameter.feet}</td>
 					</tr>
 					<tr>
 						<td className="table-column">MASS</td>
-						<td className="table-column">30,146 kg / 66,460 lb</td>
+						<td className="table-column">{rocketFeatures?.mass.kg} kg / {rocketFeatures?.mass.lb} lb</td>
 					</tr>
-					<tr>
-						<td className="table-column">PAYLOAD TO LEO</td>
-						<td className="table-column">450 kg / 992 lb</td>
-					</tr>
+					{rocketFeatures?.payload_weights.map(item => (
+						<tr key={item.id}>
+							<td className="table-column">PAYLOAD TO {item.id}</td>
+							<td className="table-column">{item.kg} kg / {item.lb} lb</td>
+						</tr>
+					))}
+	
 				</thead>
 			</table>
 			<RellaxWrapper spped={14}>
