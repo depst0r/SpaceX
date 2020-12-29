@@ -47,7 +47,7 @@ export const Features = ({ rocketFeatures }) => {
 	
 				</thead>
 			</table>
-			<RellaxWrapper spped={14}>
+			<RellaxWrapper speed={14}>
 			<img
 				src="img/falcon-1.png"
 				alt="rocket"
