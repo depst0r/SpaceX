@@ -61,12 +61,8 @@ useEffect(() => {
           <Main rocket={rocket} />
           <Features {...rocketFeatures} />
       </Route>
-      <Route path='/calendar'>
-            <Calendar />
-      </Route>
-      <Route path='/details'>
-            <Details />
-      </Route>
+      <Route path='/calendar' component={Calendar} />
+      <Route path='/details' component={Details} />
       <Footer  company={company} />
   </BrowserRouter>
   )

@@ -1,9 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import './details.scss'
 
 
 export const Details = () => {
+
+	const history = useHistory()
+
     return<>
     <main className="details">
 		<div className="container">
@@ -19,7 +22,7 @@ export const Details = () => {
 				<iframe className="details-youtube" width="560" height="315" src="https://www.youtube.com/embed/dLQ2tZEH6G0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
 			</div>
 		</div>
-		<Link to='/calendar' className="button button-back">go back</Link>
+		<a onClick={history.goBack} className="button button-back">go back</a>
 	</main>
 
     </>

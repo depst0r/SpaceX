@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-globals */
 import React from 'react'
 import RellaxWrapper from 'react-rellax-wrapper'
 import { Main } from '../Main/Main'
@@ -11,8 +10,6 @@ const rocketImages = {
 	'Falcon Heavy': 'falcon-heavy',
 	'Starship': 'starship'
 }
-
-console.log(rocketImages)
 
 export const Features = ({ rocketFeatures }) => {
 
